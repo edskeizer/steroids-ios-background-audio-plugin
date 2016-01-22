@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="com.pirkkaesko.steroids.plugin.iOSBackgroundAudio"
+    id="com.edskeizer.steroids.plugin.iOSRemoteNotifications"
     version="1.0.0">
 
-    <name>AVSession</name>
+    <name>EdsBackgroundRemote</name>
 
   <description>
-    iOS Background Audio Plugin for Steroids.js
+    iOS Background Plugin (iOS Remote Notifications) for Steroids.js
   </description>
 
   <asset src="www/EchoPlugin.js" target="plugins/EchoPlugin.js" />
@@ -20,18 +20,17 @@
   
     <config-file target="*-Info.plist" parent="UIBackgroundModes">
       <array>
-        <string>audio</string>
-        <string>fetch</string>
+        <string>remote-notification</string>
       </array>
     </config-file>
   
     <config-file target="config.xml" parent="/*/plugins">
-      <plugin name="AVSession" value="AVSession" onload="true" />
+      <plugin name="iOSRemoteNotifications" value="iOSRemoteNotifications" onload="true" />
     </config-file>
 
     <config-file target="config.xml" parent="/widget">
-      <feature name="AVSession">
-        <param name="ios-package" value="AVSession"/>
+      <feature name="iOSRemoteNotifications">
+        <param name="ios-package" value="iOSRemoteNotifications"/>
         <param name="onload" value="true" />
       </feature>
     </config-file>
